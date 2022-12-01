@@ -17,20 +17,22 @@
 <ul>
     {% comment %} list file {% endcomment %}
     {%- for item in workdir_files -%}
-        {%- assign level = item.dir | append: "temp" | replace_first: "/", "" | split: "/" | size | minus: 1 -%}
-        {%- capture current -%}
-            {%- if page.url == item.url %}current{% endif -%}
-        {%- endcapture %}
+        {%- if item.show == 1 -%}
+                {%- assign level = item.dir | append: "temp" | replace_first: "/", "" | split: "/" | size | minus: 1 -%}
+                {%- capture current -%}
+                    {%- if page.url == item.url %}current{% endif -%}
+                {%- endcapture %}
 
-        <li class="toc level-{{ level }} {{ current }}" data-sort="{{ item.sort }}" data-level="{{ level }}">
-            <a class="d-flex flex-items-baseline {{ current }}" href="{{ item.url | relative_url }}">
-                {%- if item.sort -%}
-                    {{ item.sort }}. {{ item.title | default: item.name }}
-                {%- else -%}
-                    {{ item.title | default: item.name }}
-                {%- endif -%}
-            </a>
-        </li>
+                <li class="toc level-{{ level }} {{ current }}" data-sort="{{ item.sort }}" data-level="{{ level }}">
+                    <a class="d-flex flex-items-baseline {{ current }}" href="{{ item.url | relative_url }}">
+                        {%- if item.sort -%}
+                            {{ item.sort }}. {{ item.title | default: item.name }}
+                        {%- else -%}
+                            {{ item.title | default: item.name }}
+                        {%- endif -%}
+                    </a>
+                </li>
+        {%- endif -%}
     {%- endfor -%}
 
     {% comment %} list dirs {% endcomment %}
