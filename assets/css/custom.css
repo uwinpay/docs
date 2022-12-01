@@ -20,7 +20,7 @@
     color: #999;
     border-bottom: 2px solid transparent;
     border-bottom-color: transparent;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
     transition: color .1s ease-in-out;
     line-height: 20px;
@@ -45,4 +45,12 @@
 }
 .tab-content li.active {
     display: initial;
+}
+
+.markdown-body ul, .markdown-body ol {
+    padding-left: 0em !important;
+}
+
+.markdown-body li+li {
+    margin-top: 0 !important;
 }
