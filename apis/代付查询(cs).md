@@ -1,9 +1,5 @@
----
-sort: 2
-show: 1
----
 
-# 代收查询
+# 代付查询(cs)
 
 **<u>[iugu]</u>&nbsp;&nbsp;  [dd](dd.html)&nbsp;&nbsp;  [ab](ab.html)&nbsp;&nbsp;  [cs](cs.html)&nbsp;&nbsp;  [le](le.html)**
 
@@ -29,42 +25,41 @@ Content-Type:application/json
 ```json
 {
   "merchant_code": 100012,
-  "merchant_order_no": "221201bx01010",
-  "sign": "85063e303b65d8e1601fce93d348a3e3"
+  "merchant_order_no": "tx221129sw011710",
+  "sign": "f4d528b624fc455601d9bc0949ea5e5b"
 }
 ```
 
 ## 返回结果
 
-|字段名|参数名|类型|必填|示例值|描述|
+|字段名| 参数名 | 类型  | 必填  | 示例值 | 描述  |
 |-----|-------------------------|-----|-----|-----|-----|
-|响应状态|code|String|是|success|success/fail/error|
+|响应状态|code|String|是|success| success/fail/error|
 |请求信息|msg|String|是|ok|返回的请求信息|
-|数据体|data|Object|是|-|以下为数据体属性|
-|商户号|data>>merchant_code|String|是|100012|商户后台分配的商户号(商户系统->账户信息获取)|
+|数据体| data|Object|是|以下为数据体属性|
+|商户号| data>>merchant_code | String | 是 | 100012 | 商户后台分配的商户号(商户系统->账户信息获取) |
 |商户订单号|data>>merchant_order_no|String|是|20210226165044236|商户系统商户订单号，要求32个字符内|
-|金额|data>>merchant_order_no |	String|	是|100|单位(元)|
-|实际金额|data>>reality_amount|Number|是|100|单位(元)|
-|订单状态|data>>order_status|Number|是|2|参数说明|
-|下单时间戳|data>>order_time|Number|是|1663402686 |精确到秒|
+|金额| data>>merchant_order_no |	String|	是|10|单位(元)|
+|实际金额| data>>reality_amount|Number|是|100|单位(元)|
+|订单状态| data>>order_status|Number|是|2|参数说明|
+|下单时间戳| data>>order_time|Number|是|1663402686|精确到秒|
 |签名|data>>sign|String|是|9a55c3868b414cdc740068420a2d3q00|[签名算法](../rule/签名算法.html)|
-
 
 ## 响应示例
 
 ```json
 {
-    "code": "success",
-    "data": {
-        "merchant_code": "100012",
-        "merchant_order_no": "221201bx01010",
-        "amount": "100.0000",
-        "reality_amount": "100.0000",
-        "order_status": 0,
-        "order_no": "20221201101710576638",
-        "order_time": 1669861030,
-        "sign": "880b171c6ae4f9fb32451992f7066a1c"
-    },
-    "msg": "ok"
+  "code": "success",
+  "data": {
+    "merchant_code": "100012",
+    "merchant_order_no": "tx221129sw011710",
+    "amount": "10.0000",
+    "reality_amount": "10.0000",
+    "order_status": 0,
+    "order_no": "20221129103145625019",
+    "order_time": 1669689105,
+    "sign": "eb006ca0bce7f48b8d843caab12516d2"
+  },
+  "msg": "ok"
 }
 ```

@@ -1,9 +1,5 @@
----
-sort: 2
-show: 1
----
 
-# 代收查询
+# 代收查询(dd)
 
 **<u>[iugu]</u>&nbsp;&nbsp;  [dd](dd.html)&nbsp;&nbsp;  [ab](ab.html)&nbsp;&nbsp;  [cs](cs.html)&nbsp;&nbsp;  [le](le.html)**
 

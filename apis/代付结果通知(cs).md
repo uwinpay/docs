@@ -1,46 +1,24 @@
----
-sort: 5
-show: 1
----
 
-# 代付查询
+# 代付结果通知(cs)
 
 **<u>[iugu]</u>&nbsp;&nbsp;  [dd](dd.html)&nbsp;&nbsp;  [ab](ab.html)&nbsp;&nbsp;  [cs](cs.html)&nbsp;&nbsp;  [le](le.html)**
 
-## 请求地址
-https://[[域名]](../help/区域域名.html)/i/pay/create
+## 通知地址
+`此地址为商户传入的回调地址`
 
-## 请求方式
+## 通知方式
 POST
 
-## 请求头
+## 通知头信息
 Content-Type:application/json
 
-## 请求参数
-
-| 字段名 | 参数名 | 类型  | 必填  | 示例值 | 描述  |
-|--|-----|-----|-----|-----|-----|
-|商户号 |	merchant_code	|String	|是	|100012	|商户后台分配的商户号(商户系统->账户信息获取)|
-|商户订单号 |	merchant_order_no|	String|	是	|221201bx01010|	商户系统商户订单号，要求32个字符内|
-|签名|	sign|	String|	是|	9a55c3868b414cdc740068420a2d3q00|[签名算法](../rule/签名算法.html)|
-
-## 请求示例
-
-```json
-{
-  "merchant_code": 100012,
-  "merchant_order_no": "tx221129sw011710",
-  "sign": "f4d528b624fc455601d9bc0949ea5e5b"
-}
-```
-
-## 返回结果
+## 通知参数
 
 |字段名| 参数名 | 类型  | 必填  | 示例值 | 描述  |
 |-----|-------------------------|-----|-----|-----|-----|
-|响应状态|code|String|是|success| success/fail/error|
+|响应状态|code|String|是|success|success/fail|
 |请求信息|msg|String|是|ok|返回的请求信息|
-|数据体| data|Object|是|以下为数据体属性|
+|数据体| data|Object|是|-|以下为数据体属性|
 |商户号| data>>merchant_code | String | 是 | 100012 | 商户后台分配的商户号(商户系统->账户信息获取) |
 |商户订单号|data>>merchant_order_no|String|是|20210226165044236|商户系统商户订单号，要求32个字符内|
 |金额| data>>merchant_order_no |	String|	是|10|单位(元)|
@@ -49,7 +27,7 @@ Content-Type:application/json
 |下单时间戳| data>>order_time|Number|是|1663402686|精确到秒|
 |签名|data>>sign|String|是|9a55c3868b414cdc740068420a2d3q00|[签名算法](../rule/签名算法.html)|
 
-## 响应示例
+## 请求示例
 
 ```json
 {
@@ -66,4 +44,14 @@ Content-Type:application/json
   },
   "msg": "ok"
 }
+```
+
+## 通知应答
+
+`收到回调信息后，返回字符串‘OK’，不返回回调接口会重试三次`
+
+示例如下：
+
+```
+OK
 ```

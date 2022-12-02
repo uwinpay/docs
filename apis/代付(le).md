@@ -1,9 +1,5 @@
----
-sort: 4
-show: 1
----
 
-# 代付
+# 代付(le)
 
 **<u>[iugu]</u>&nbsp;&nbsp;  [dd](dd.html)&nbsp;&nbsp;  [ab](ab.html)&nbsp;&nbsp;  [cs](cs.html)&nbsp;&nbsp;  [le](le.html)**
 
@@ -22,13 +18,16 @@ Content-Type:application/json
 |-----|-----|-----|-----|-----|-----|
 |商户号 | merchant_code | String | 是 | 100012 | 商户后台分配的商户号(商户系统->账户信息获取) |
 |商户订单号 | merchant_order_no | String | 是 | 456545645487 | 商户系统商户订单号，要求32个字符内 |
-|币种 | currency | String | 是 | BRL | 雷亚尔 |
+|支付类型|pay_type|String|是|dd|示例中的固定值|
+|币种|currency|String|是|INR|卢比|
+|订单描述|description|String|是|xxxx|-|
 |电话号码 | mobile | String | 是 | 254743123003 | 收款人电话 |
-|金额 | amount | String | 是 | 200 | 支付金额 |
+|邮箱|email|String|是|xxx@gmail.com|收款人邮箱|
+|收款银行卡号|bank_account|是|-|-|
+|印度ifsc|bank_code|String|是|56432545555|`必须为11位`|
+|收款人姓名|name|String|是|jack|-|
+|金额 | amount | String | 是 | 200 | 最小100卢比，最大499999卢比 ，最多带2位小数 |
 |回调地址 | notify_url | String | 是 | https://www.xxx.com/notify | 付款成功后支付系统通过该地址通知支付结果 |
-|下单时间戳 | order_time | Number | 是 | 1663402686 | 精确到秒 |
-|账户类型 | account_type | String | 是 | 1 - CPF，2 - CNPJ，3 - EMAIL，4 - PHONE，5 - EVP | 1-5分别对应五种账户类型 |
-|账户号码 | account_number | String | 是 | 56466655 | 根据账户类型填写相应的号码 |
 |签名 | sign | String | 是 | 9a55c3868b414cdc740068420a2d3q00 | 签名规则 |
 
 ## 请求示例
