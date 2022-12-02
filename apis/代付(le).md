@@ -66,7 +66,7 @@ Content-Type:application/json
 |商户号|data>>merchant_code|String|是|GKggRpDN6|商户系统商户订单号，要求32个字符内|
 |金额|data>>amount|Number|是|100|代付金额|
 |实际金额|data>>reality_amount|Number|是|100|代付实际金额|
-|订单状态|data>>order_status|Number|是|2|参数说明|
+|订单状态|data>>order_status|Number|是|2|[参数说明](../help/参数说明.html#订单状态)|
 |下单时间戳|data>>order_time|Number|是|1663402686|精确到秒|
 |签名|data>>sign|String|是|9a55c3868b414cdc740068420a2d3q00|[签名算法](../rule/签名算法.html)|
 
