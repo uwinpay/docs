@@ -24,8 +24,10 @@ Content-Type:application/json
 |--|-----|-----|-----|-----|-----|
 |商户号 |	merchant_code	|String	|是	|100012	|商户后台分配的商户号(商户系统->账户信息获取)|
 |商户订单号 |	merchant_order_no|	String|	是	|221201bx01010|	商户系统商户订单号，要求32个字符内|
-|支付通道编码|	pay_type|	String|	是|	iugu|	固定值|
-|币种|	currency|	String|	是|	BRL|	固定值|
+|支付通道编码|	pay_type|	String|	是|	cs|	固定值|
+|币种|	currency|	String|	是|	PHP|菲律宾比索|
+|交易银行|bank_code|String|是|GCASH_ONLINE:gcash online（电子钱包）,GRABPAY_ONLINE:GrabPay online（电子钱包）|
+|订单描述|description|String|是|-|-|
 |付款人姓名|	name|	String|	是|	Jack|
 |付款人手机号|	mobile|	String|	是|	5213562778893|
 |付款人邮箱|	email|	String|	是|	xxxxx@google.com|
@@ -33,25 +35,28 @@ Content-Type:application/json
 |回调地址|	notify_url	|String	|是	|https://www.xxx.com/notify|	付款成功后支付系统通过该地址通知支付结果|
 |成功转向地址|	page_url|	String|	是|	https://www.xxxxx.com/paysuccess|	支付成功的返回页面|
 |下单时间戳|	order_time|	Number|	是|	1663402686|	精确到秒|
+|客户ip|cust_ip|String|是|27.109.95.255|-|
 |签名|	sign|	String|	是|	9a55c3868b414cdc740068420a2d3q00|[签名算法](../rule/签名算法.html)|
 
 ## 请求示例
 
 ```json
 {
-    "merchant_code":"100012",
-    "nonce_str":"qb5gTUxMLBrAOhe",
-    "pay_type":"iugu",
-    "currency":"BRL",
-    "mobile":"6456312891",
-    "name":"test",
-    "email":"88886666@qq.com",
-    "amount":"100.00",
-    "notify_url":"https://www.xxxx.com/api/notify",
-    "merchant_order_no":"20221201133641400317",
-    "page_url":"https://www.xxxx.com/paysuccess",
-    "order_time":1669873001,
-    "sign":"9a55c3868b414cdc740068420a2d3q00"
+  "merchant_code": "100012",
+  "merchant_order_no": "20221202064440678397",
+  "pay_type": "cs",
+  "currency": "PHP",
+  "name": "test",
+  "mobile": "09456312891",
+  "email": "gmail@gmail.com",
+  "amount": "100.00",
+  "notify_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/cnspay\/pay_notify",
+  "page_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/cnspay\/pay_return",
+  "order_time": 1669981480,
+  "bank_code": "GCASH_ONLINE",
+  "description": "description",
+  "cust_ip": "27.109.95.255",
+  "sign": "fe5db31cafcdc7d7f1e2efedfcfa1ef3"
 }
 ```
 
@@ -75,18 +80,18 @@ Content-Type:application/json
 
 ```json
 {
-  "code":"success",
-  "data":{
-    "merchant_code":"100012",
-    "merchant_order_no":"20221201133641400317",
-    "amount":"100.00",
-    "reality_amount":"100.00",
-    "order_status":1,
-    "pay_data":"https://xxx.xxx.com/",
-    "order_no":"20221201133714239179",
-    "order_time":1669873037,
-    "sign":"f14afb862100420050fc94a04611db47"
+  "code": "success",
+  "data": {
+    "merchant_code": "100012",
+    "merchant_order_no": "20221202064440678397",
+    "amount": "100.00",
+    "reality_amount": "100.00",
+    "order_status": "P000",
+    "pay_data": "https:\/\/pay.xxxx.com\/pay\/webpay?token_id=0052d706e49886b9f15b3cb997b8a6bc6&service=pay.gcash.webpay",
+    "order_no": "20221202114452418853",
+    "order_time": 1669981493,
+    "sign": "919cc7851451bad1443a08a097b7c1b2"
   },
-  "msg":"ok"
+  "msg": "ok"
 }
 ```

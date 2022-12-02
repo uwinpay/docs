@@ -22,14 +22,16 @@ Content-Type:application/json
 
 | 字段名 | 参数名 | 类型  | 必填  | 示例值 | 描述  |
 |--|-----|-----|-----|-----|-----|
-|商户号 |	merchant_code	|String	|是	|100012	|商户后台分配的商户号(商户系统->账户信息获取)|
-|商户订单号 |	merchant_order_no|	String|	是	|221201bx01010|	商户系统商户订单号，要求32个字符内|
-|支付通道编码|	pay_type|	String|	是|	iugu|	固定值|
-|币种|	currency|	String|	是|	BRL|	固定值|
-|付款人姓名|	name|	String|	是|	Jack|
-|付款人手机号|	mobile|	String|	是|	5213562778893|
-|付款人邮箱|	email|	String|	是|	xxxxx@google.com|
-|金额|	amount|	String|	是|	200|	单位(元)，保留两位小数|
+|商户号 |merchant_code	|String	|是	|100012	|商户后台分配的商户号(商户系统->账户信息获取)|
+|商户订单号 |merchant_order_no|	String|	是	|221201bx01010|	商户系统商户订单号，要求32个字符内|
+|支付通道编码|pay_type|String|是|dd|示例中的固定值|
+|代收方式|method|String|是|UPI|示例中的固定值|
+|币种|currency|String|是|INR|卢比|
+|订单描述|description|String|是|xxxx|
+|付款人姓名|name|String|是|	Jack|
+|付款人手机号|mobile|String|	是|	5213562778893|
+|付款人邮箱|email|String|	是|	xxxxx@google.com|
+|金额|amount|String|是|	200|	单位(元)，保留两位小数|
 |回调地址|	notify_url	|String	|是	|https://www.xxx.com/notify|	付款成功后支付系统通过该地址通知支付结果|
 |成功转向地址|	page_url|	String|	是|	https://www.xxxxx.com/paysuccess|	支付成功的返回页面|
 |下单时间戳|	order_time|	Number|	是|	1663402686|	精确到秒|
@@ -39,19 +41,20 @@ Content-Type:application/json
 
 ```json
 {
-    "merchant_code":"100012",
-    "nonce_str":"qb5gTUxMLBrAOhe",
-    "pay_type":"iugu",
-    "currency":"BRL",
-    "mobile":"6456312891",
-    "name":"test",
-    "email":"88886666@qq.com",
-    "amount":"100.00",
-    "notify_url":"https://www.xxxx.com/api/notify",
-    "merchant_order_no":"20221201133641400317",
-    "page_url":"https://www.xxxx.com/paysuccess",
-    "order_time":1669873001,
-    "sign":"9a55c3868b414cdc740068420a2d3q00"
+  "merchant_code": "100012",
+  "merchant_order_no": "20221202050255582633",
+  "pay_type": "dd",
+  "method": "UPI",
+  "currency": "INR",
+  "description": "description",
+  "name": "test",
+  "mobile": "6456312891",
+  "email": "gmail@qq.com",
+  "amount": "100.09",
+  "notify_url": "https:\/\/www.xxxx.com\/notify",
+  "page_url": "test",
+  "order_time": 1669975375,
+  "sign": "67e2e394f23e6d1f3ce83682eba06f03"
 }
 ```
 
@@ -74,19 +77,20 @@ Content-Type:application/json
 ## 响应示例
 
 ```json
+
 {
-  "code":"success",
-  "data":{
-    "merchant_code":"100012",
-    "merchant_order_no":"20221201133641400317",
-    "amount":"100.00",
-    "reality_amount":"100.00",
-    "order_status":1,
-    "pay_data":"https://xxx.xxx.com/",
-    "order_no":"20221201133714239179",
-    "order_time":1669873037,
-    "sign":"f14afb862100420050fc94a04611db47"
+  "code": "success",
+  "data": {
+    "merchant_code": "100012",
+    "merchant_order_no": "20221202050255582633",
+    "amount": "100.09",
+    "reality_amount": "100.09",
+    "order_status": 1,
+    "pay_data": "https:\/\/xxxxx\/#\/?orderNo=PI-1202153197237627968162825",
+    "order_no": "20221202050320110643",
+    "order_time": 1669975401,
+    "sign": "3bbbe907f8be4f7e53294b906b06eece"
   },
-  "msg":"ok"
+  "msg": "ok"
 }
 ```
