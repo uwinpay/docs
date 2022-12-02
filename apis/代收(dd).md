@@ -1,15 +1,7 @@
----
-sort: 1
-show: 1
----
 
-# 代收
+# 代收(dd)
 
-| 区域 | 通道（可点击切换） |
-| --- | --- |
-| 巴西 | **<u>[iugu]</u>** |
-| 印度 | [dd](代收(dd).html)&nbsp;&nbsp; [ab](代收(ab).html) |
-| 菲律宾 | [cs](代收(cs).html)&nbsp;&nbsp; [le](代收(le).html) |
+**<u>[iugu]</u>&nbsp;&nbsp;  [dd](dd.html)&nbsp;&nbsp;  [ab](ab.html)&nbsp;&nbsp;  [cs](cs.html)&nbsp;&nbsp;  [le](le.html)**
 
 ## 请求地址
 https://[[域名]](../help/区域域名.html)/i/pay/create

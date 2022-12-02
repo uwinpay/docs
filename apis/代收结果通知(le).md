@@ -1,9 +1,5 @@
----
-sort: 3
-show: 1
----
 
-# 代收结果通知
+# 代收结果通知(le)
 
 **<u>[iugu]</u>&nbsp;&nbsp;  [dd](dd.html)&nbsp;&nbsp;  [ab](ab.html)&nbsp;&nbsp;  [cs](cs.html)&nbsp;&nbsp;  [le](le.html)**
 
