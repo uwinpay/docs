@@ -18,8 +18,8 @@ Content-Type:application/json
 |--|-----|-----|-----|-----|-----|
 |商户号 |	merchant_code	|String	|是	|100012	|商户后台分配的商户号(商户系统->账户信息获取)|
 |商户订单号 |	merchant_order_no|	String|	是	|221201bx01010|	商户系统商户订单号，要求32个字符内|
-|支付通道编码|	pay_type|	String|	是|	iugu|	固定值|
-|币种|	currency|	String|	是|	BRL|	固定值|
+|支付通道编码|	pay_type|	String|	是|	le|	固定值|
+|币种|	currency|	String|	是|	PHP|菲律宾比索|
 |付款人姓名|	name|	String|	是|	Jack|
 |付款人手机号|	mobile|	String|	是|	5213562778893|
 |付款人邮箱|	email|	String|	是|	xxxxx@google.com|
@@ -33,19 +33,18 @@ Content-Type:application/json
 
 ```json
 {
-    "merchant_code":"100012",
-    "nonce_str":"qb5gTUxMLBrAOhe",
-    "pay_type":"iugu",
-    "currency":"BRL",
-    "mobile":"6456312891",
-    "name":"test",
-    "email":"88886666@qq.com",
-    "amount":"100.00",
-    "notify_url":"https://www.xxxx.com/api/notify",
-    "merchant_order_no":"20221201133641400317",
-    "page_url":"https://www.xxxx.com/paysuccess",
-    "order_time":1669873001,
-    "sign":"9a55c3868b414cdc740068420a2d3q00"
+  "merchant_code": "100012",
+  "merchant_order_no": "20221202071940587145",
+  "pay_type": "le",
+  "currency": "PHP",
+  "name": "test admin",
+  "mobile": "6456312891",
+  "email": "114779881@qq.com",
+  "amount": "100.00",
+  "notify_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/letspay\/pay_notify",
+  "page_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/letspay\/pay_return",
+  "order_time": 1669983580,
+  "sign": "bf19a67832e894cf82442ca660e044d8"
 }
 ```
 
@@ -69,18 +68,18 @@ Content-Type:application/json
 
 ```json
 {
-  "code":"success",
-  "data":{
-    "merchant_code":"100012",
-    "merchant_order_no":"20221201133641400317",
-    "amount":"100.00",
-    "reality_amount":"100.00",
-    "order_status":1,
-    "pay_data":"https://xxx.xxx.com/",
-    "order_no":"20221201133714239179",
-    "order_time":1669873037,
-    "sign":"f14afb862100420050fc94a04611db47"
+  "code": "success",
+  "data": {
+    "merchant_code": "100012",
+    "merchant_order_no": "20221202071940587145",
+    "amount": "100.00",
+    "reality_amount": "100.00",
+    "order_status": 1,
+    "pay_data": "https:\/\/alfapay63.com\/r\/t\/da72486f-77c3-45f1-9079-c3e5e73bf21b",
+    "order_no": "20221202072009088344",
+    "order_time": 1669983611,
+    "sign": "34919ffa66f5f3520953aec2b544f6d2"
   },
-  "msg":"ok"
+  "msg": "ok"
 }
 ```

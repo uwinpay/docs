@@ -22,33 +22,31 @@ Content-Type:application/json
 |-----|-----|-----|-----|-----|-----|
 |商户号 | merchant_code | String | 是 | 100012 | 商户后台分配的商户号(商户系统->账户信息获取) |
 |商户订单号 | merchant_order_no | String | 是 | 456545645487 | 商户系统商户订单号，要求32个字符内 |
-|支付类型|pay_type|String|是|dd|示例中的固定值|
-|币种|currency|String|是|INR|卢比|
-|订单描述|description|String|是|xxxx|-|
+|币种|currency|String|是|PHP|菲律宾比索|
 |电话号码 | mobile | String | 是 | 254743123003 | 收款人电话 |
 |邮箱|email|String|是|xxx@gmail.com|收款人邮箱|
 |收款银行卡号|bank_account|是|-|-|
-|印度ifsc|bank_code|String|是|56432545555|`必须为11位`|
+|收款银行编码|bank_code|String|是|GCASH`(建议使用此类)`|GCASH:电子钱包，BANKRT:instapay银行实时，BANKNRT:pesonet银行非实时，PAYMAYA:电子钱包,GRABPAY:电子钱包|
 |收款人姓名|name|String|是|jack|-|
 |金额 | amount | String | 是 | 200 | 最小100卢比，最大499999卢比 ，最多带2位小数 |
 |回调地址 | notify_url | String | 是 | https://www.xxx.com/notify | 付款成功后支付系统通过该地址通知支付结果 |
-|签名 | sign | String | 是 | 9a55c3868b414cdc740068420a2d3q00 | 签名规则 |
+|签名 | sign | String | 是 | 9a55c3868b414cdc740068420a2d3q00 |[签名算法](../rule/签名算法.html)|
 
 ## 请求示例
 
 ```json
 {
   "merchant_code": "100012",
-  "merchant_order_no": "20221202135223988596",
-  "currency": "BRL",
-  "mobile": "6456312891",
+  "merchant_order_no": "20221202071204771165",
+  "currency": "PHP",
+  "amount": "199.10",
+  "notify_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/test\/letspay_transfer_notify",
   "name": "test",
-  "amount": 100,
-  "notify_url": "https:\/\/www",
-  "order_time": 1669960343,
-  "account_type": "1",
-  "account_number": "4554654",
-  "sign": "7d83d736a54f1393eae78bdbc8a3c57e"
+  "mobile": "6456312891",
+  "email": "admin@qq.com",
+  "bank_code": "PAYMAYA",
+  "bank_account": "4414333344445555",
+  "sign": "15fa59c8fa4aeef14b1534c239e1d066"
 }
 ```
 
@@ -75,13 +73,13 @@ Content-Type:application/json
   "code": "success",
   "data": {
     "merchant_code": "100012",
-    "merchant_order_no": "20221202135223988596",
-    "amount": 100,
-    "reality_amount": 100,
+    "merchant_order_no": "20221202071204771165",
+    "amount": "199.10",
+    "reality_amount": "199.10",
     "order_status": 0,
-    "order_no": "20221202135231869872",
-    "order_time": 1669960351,
-    "sign": "55be7fc85c1a2cb4be3031303494cd5d"
+    "order_no": "20221202071232169671",
+    "order_time": 1669983152,
+    "sign": "73e849d7d5c8d38c4410f3bd66487813"
   },
   "msg": "ok"
 }

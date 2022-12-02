@@ -18,7 +18,6 @@ Content-Type:application/json
 |-----|-----|-----|-----|-----|-----|
 |商户号 | merchant_code | String | 是 | 100012 | 商户后台分配的商户号(商户系统->账户信息获取) |
 |商户订单号 | merchant_order_no | String | 是 | 456545645487 | 商户系统商户订单号，要求32个字符内 |
-|支付类型|pay_type|String|是|dd|示例中的固定值|
 |币种|currency|String|是|INR|卢比|
 |订单描述|description|String|是|xxxx|-|
 |电话号码 | mobile | String | 是 | 254743123003 | 收款人电话 |
@@ -28,23 +27,26 @@ Content-Type:application/json
 |收款人姓名|name|String|是|jack|-|
 |金额 | amount | String | 是 | 200 | 最小100卢比，最大499999卢比 ，最多带2位小数 |
 |回调地址 | notify_url | String | 是 | https://www.xxx.com/notify | 付款成功后支付系统通过该地址通知支付结果 |
-|签名 | sign | String | 是 | 9a55c3868b414cdc740068420a2d3q00 | 签名规则 |
+|下单时间戳|	order_time|	Number|	是|	1663402686|	精确到秒|
+|签名 | sign | String | 是 | 9a55c3868b414cdc740068420a2d3q00 |[签名算法](../rule/签名算法.html)|
 
 ## 请求示例
 
 ```json
 {
   "merchant_code": "100012",
-  "merchant_order_no": "20221202135223988596",
-  "currency": "BRL",
+  "merchant_order_no": "20221202053647681047",
+  "currency": "INR",
+  "description": "description",
   "mobile": "6456312891",
-  "name": "test",
-  "amount": 100,
-  "notify_url": "https:\/\/www",
-  "order_time": 1669960343,
-  "account_type": "1",
-  "account_number": "4554654",
-  "sign": "7d83d736a54f1393eae78bdbc8a3c57e"
+  "email": "gmail@qq.com",
+  "bank_account": "123123123",
+  "bank_code": "PUNB0752900",
+  "name": "radUjdd",
+  "amount": "100.09",
+  "notify_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/letspay\/pay_notify",
+  "order_time": 1669977407,
+  "sign": "a7a3f7eaae2f209a2f3e093febfa3018"
 }
 ```
 
@@ -71,13 +73,13 @@ Content-Type:application/json
   "code": "success",
   "data": {
     "merchant_code": "100012",
-    "merchant_order_no": "20221202135223988596",
-    "amount": 100,
-    "reality_amount": 100,
+    "merchant_order_no": "20221202043353832570",
+    "amount": "100.09",
+    "reality_amount": "100.09",
     "order_status": 0,
-    "order_no": "20221202135231869872",
-    "order_time": 1669960351,
-    "sign": "55be7fc85c1a2cb4be3031303494cd5d"
+    "order_no": "20221202043808052151",
+    "order_time": 1669973888,
+    "sign": "476e395e1bf9d2712eaf73845caf4e38"
   },
   "msg": "ok"
 }
