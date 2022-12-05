@@ -22,18 +22,18 @@ Content-Type:application/json
 
 | 字段名 | 参数名 | 类型 | 必填 | 示例 | 描述 |
 |-----|-----|-----|-----|-----|-----|
-|商户号 | merchant_code | String | 是 | 100012 | 商户后台分配的商户号(商户系统->账户信息获取) |
-|商户订单号 | merchant_order_no | String | 是 | 456545645487 | 商户系统商户订单号，要求32个字符内 |
+|商户号|merchant_code|String| 是 | 100012 | 商户后台分配的商户号(商户系统->账户信息获取) |
+|商户订单号|merchant_order_no|String| 是 | 456545645487 | 商户系统商户订单号，要求32个字符内 |
 |支付类型|pay_type|String|是|le|示例中的固定值|
 |币种|currency|String|是|PHP|菲律宾比索|
-|电话号码 | mobile | String | 是 | 254743123003 | 收款人电话 |
+|电话号码|mobile|String|是|254743123003|收款人电话|
 |邮箱|email|String|是|xxx@gmail.com|收款人邮箱|
-|收款银行卡号|bank_account|是|-|-|
+|银行卡号|bank_account|是|-|收款银行卡号|
 |银行代号|bank_code|String|是|GrabPay|GrabPay,Gcash,Paymaya(任选一种)|
-|收款人姓名|name|String|是|jack|-|
-|金额 | amount | String | 是 | 200 | 最小100卢比，最大499999卢比 ，最多带2位小数 |
-|回调地址 | notify_url | String | 是 | https://www.xxx.com/notify | 付款成功后支付系统通过该地址通知支付结果 |
-|签名 | sign | String | 是 | 9a55c3868b414cdc740068420a2d3q00 | 签名规则 |
+|姓名|name|String|是|jack|收款人姓名|
+|金额|amount|String|是|200|最小100卢比，最大499999卢比 ，最多带2位小数|
+|回调地址|notify_url|String|是|https://www.xxx.com/notify|付款成功后支付系统通过该地址通知支付结果|
+|签名|sign|String|是|9a55c3868b414cdc740068420a2d3q00|签名规则|
 
 ## 请求示例
 

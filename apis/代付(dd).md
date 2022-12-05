@@ -28,7 +28,7 @@ Content-Type:application/json
 |订单描述|description|String|是|xxxx|-|
 |电话号码 | mobile | String | 是 | 254743123003 | 收款人电话 |
 |邮箱|email|String|是|xxx@gmail.com|收款人邮箱|
-|收款银行卡号|bank_account|是|-|-|
+|收款银行卡号|bank_account|String|是|-|-|
 |印度ifsc|bank_code|String|是|56432545555|`必须为11位`|
 |收款人姓名|name|String|是|jack|-|
 |金额 | amount | String | 是 | 200 | 最小100卢比，最大499999卢比 ，最多带2位小数 |

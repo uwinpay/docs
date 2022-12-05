@@ -25,10 +25,10 @@ Content-Type:application/json
 |商户号 | merchant_code | String | 是 | 100012 | 商户后台分配的商户号(商户系统->账户信息获取) |
 |商户订单号 | merchant_order_no | String | 是 | 456545645487 | 商户系统商户订单号，要求32个字符内 |
 |币种|currency|String|是|PHP|菲律宾比索|
-|电话号码 | mobile | String | 是 | 254743123003 | 收款人电话 |
+|电话号码 | mobile | String | 是 | 254743123003 | 收款账户为电子钱包时，GCASH，PAYMAYA，GRABPAY，必须保证手机号真实性，代付会根据手机号入账。 |
 |邮箱|email|String|是|xxx@gmail.com|收款人邮箱|
-|收款银行卡号|bank_account|是|-|-|
 |收款银行编码|bank_code|String|是|GCASH`(建议使用此类)`|GCASH:电子钱包，BANKRT:instapay银行实时，BANKNRT:pesonet银行非实时，PAYMAYA:电子钱包,GRABPAY:电子钱包|
+|收款银行卡号|bank_account|是|-|收款方账号BANKRT、BANKNRT时必须上送|
 |收款人姓名|name|String|是|jack|-|
 |金额 | amount | String | 是 | 200 | 最小100卢比，最大499999卢比 ，最多带2位小数 |
 |回调地址 | notify_url | String | 是 | https://www.xxx.com/notify | 付款成功后支付系统通过该地址通知支付结果 |

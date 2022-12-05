@@ -22,18 +22,19 @@ Content-Type:application/json
 
 | 字段名 | 参数名 | 类型  | 必填  | 示例值 | 描述  |
 |--|-----|-----|-----|-----|-----|
-|商户号 |	merchant_code	|String	|是	|100012	|商户后台分配的商户号(商户系统->账户信息获取)|
-|商户订单号 |	merchant_order_no|	String|	是	|221201bx01010|	商户系统商户订单号，要求32个字符内|
-|支付通道编码|	pay_type|	String|	是|	iugu|	固定值|
-|币种|	currency|	String|	是|	BRL|	固定值|
-|付款人姓名|	name|	String|	是|	Jack|
-|付款人手机号|	mobile|	String|	是|	5213562778893|
-|付款人邮箱|	email|	String|	是|	xxxxx@google.com|
-|金额|	amount|	String|	是|	200|	单位(元)，保留两位小数|
-|回调地址|	notify_url	|String	|是	|https://www.xxx.com/notify|	付款成功后支付系统通过该地址通知支付结果|
-|成功转向地址|	page_url|	String|	是|	https://www.xxxxx.com/paysuccess|	支付成功的返回页面|
-|下单时间戳|	order_time|	Number|	是|	1663402686|	精确到秒|
-|签名|	sign|	String|	是|	9a55c3868b414cdc740068420a2d3q00|[签名算法](../rule/签名算法.html)|
+|商户号|merchant_code|String|是|100012|商户后台分配的商户号(商户系统->账户信息获取)|
+|商户订单号|merchant_order_no|String|是|221201bx01010|商户系统商户订单号，要求32个字符内|
+|支付通道编码|pay_type|String|是|ab|示例中的固定值|
+|币种|currency|String|是|INR|卢比|
+|名字|first_name|String|是|Jack|付款人名字|
+|姓氏|last_name|String|是|Rose|付款人姓氏|
+|电话号码|mobile|String|是|5213562778893|付款人电话号码|
+|付款人邮箱|email|String|是|xxxxx@google.com|付款人邮箱|
+|金额|amount|String|是|200|单位(元)，保留两位小数|
+|回调地址|notify_url|String|是|https://www.xxx.com/notify|付款成功后支付系统通过该地址通知支付结果|
+|成功转向地址|page_url|String|是|https://www.xxxxx.com/paysuccess|支付成功的返回页面|
+|下单时间戳|order_time|Number|是|1663402686|精确到秒|
+|签名|sign|String|是|9a55c3868b414cdc740068420a2d3q00|[签名算法](../rule/签名算法.html)|
 
 ## 请求示例
 
