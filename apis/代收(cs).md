@@ -6,7 +6,7 @@
 | 区域 | 通道（可点击切换）                                     |
 | --- |-----------------------------------------------|
 | 巴西 | [iugu](代收.html)                           |
-| 印度 | [dd](代收(dd).html)&nbsp;&nbsp; [ab](代收(ab).html) |
+| 印度 | [dd](代收(dd).html)&nbsp;&nbsp; [ab（通道维护中）](代收(ab).html) |
 | 菲律宾 | [cs](代收(cs).html)&nbsp;&nbsp; [le](代收(le).html) |
 
 ## 请求地址
@@ -28,10 +28,10 @@ Content-Type:application/json
 |币种|currency|String|是|PHP|菲律宾比索|
 |交易银行|bank_code|String|是|GCASH_ONLINE|GCASH_ONLINE:gcash online（电子钱包）,GRABPAY_ONLINE:GrabPay online（电子钱包）|
 |订单描述|description|String|是|-|订单描述|
-|姓名|name|String|是|Jack|订单描述|
-|电话号码|mobile|String|是|5213562778893|付款人电话号码|
+|姓名|name|String|是|Jack|付款人姓名|
+|电话号码|mobile|String|是|5213562778893|付款人联系方式|
 |邮箱|email|String|是|xxxxx@google.com|付款人邮箱|
-|金额|amount|String|是|200|单位(元)，保留两位小数|
+|金额|amount|String|是|100..00|单位(元)，保留两位小数|
 |回调地址|notify_url|String|是|https://www.xxx.com/notify|付款成功后支付系统通过该地址通知支付结果|
 |成功转向地址|page_url|String|是|https://www.xxxxx.com/paysuccess|	支付成功的返回页面|
 |下单时间戳|order_time|Number|是|1663402686|精确到秒|
@@ -42,21 +42,21 @@ Content-Type:application/json
 
 ```json
 {
-  "merchant_code": "100012",
-  "merchant_order_no": "20221202064440678397",
-  "pay_type": "cs",
-  "currency": "PHP",
-  "name": "test",
-  "mobile": "09456312891",
-  "email": "gmail@gmail.com",
-  "amount": "100.00",
-  "notify_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/cnspay\/pay_notify",
-  "page_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/cnspay\/pay_return",
-  "order_time": 1669981480,
-  "bank_code": "GCASH_ONLINE",
-  "description": "description",
-  "cust_ip": "27.109.95.255",
-  "sign": "fe5db31cafcdc7d7f1e2efedfcfa1ef3"
+    "merchant_code": "100012",
+    "merchant_order_no": "20221202064440678397",
+    "pay_type": "cs",
+    "currency": "PHP",
+    "name": "test",
+    "mobile": "09456312891",
+    "email": "gmail@gmail.com",
+    "amount": "100.00",
+    "notify_url": "https://www.xxxx.com/api/notify",
+    "page_url": "https://www.xxxx.com/paysuccess",
+    "order_time": 1669981480,
+    "bank_code": "GCASH_ONLINE",
+    "description": "description",
+    "cust_ip": "27.109.95.255",
+    "sign": "fe5db31cafcdc7d7f1e2efedfcfa1ef3"
 }
 ```
 
@@ -67,12 +67,13 @@ Content-Type:application/json
 |响应状态|code|String|是|success|success/fail/error|
 |请求信息|msg|String|是|ok|返回的请求信息|
 |数据体|data|Object|是|-|以下为数据体属性|
-|平台订单号|data>>order_no|String|是|20210226165044236|返回给c端用户打开|
-|商户订单号|data>>merchant_order_no|String|是|10226165044236|系统平台订单号，要求32个字符内|
-|商户号|data>>merchant_code|String|是|GKggRpDN6|商户系统商户订单号，要求32个字符内|
-|金额|data>>amount|Number|是|100|代付金额|
-|实际金额|data>>reality_amount|Number|是|100|代付实际金额|
+|平台订单号|data>>order_no|String|是|20210226165044236|系统生成的平台订单号|
+|商户订单号|data>>merchant_order_no|String|是|10226165044236|商户系统商户订单号，要求32个字符内|
+|商户号|data>>merchant_code|String|是|GKggRpDN6|商户后台分配的商户号(商户系统->账户信息获取)|
+|金额|data>>amount|String|是|100.00|单位(元)，保留两位小数|
+|实际金额|data>>reality_amount|Number|是|100.00|单位(元)，保留两位小数|
 |订单状态|data>>order_status|Number|是|2|[参数说明](../help/参数说明.html#订单状态)|
+|支付链接|data>>pay_data|String|是|https://xxx.xxx.com/pay|返回给C端用户打开的支付链接|
 |下单时间戳|data>>order_time|Number|是|1663402686|精确到秒|
 |签名|data>>sign|String|是|9a55c3868b414cdc740068420a2d3q00|[签名算法](../rule/签名算法.html)|
 
