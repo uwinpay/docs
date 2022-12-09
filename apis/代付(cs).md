@@ -8,6 +8,7 @@
 | 巴西 | [iugu](代付.html)                                 |
 | 印度 | [dd](代付(dd).html)&nbsp;&nbsp; [ab（通道维护中）](代付(ab).html) |
 | 菲律宾 | [cs](代付(cs).html)&nbsp;&nbsp; [le](代付(le).html) |
+| 墨西哥 | [sp](代付(sp).html)|
 
 ## 请求地址
 https://[[域名]](../help/区域域名.html)/i/pay/create
