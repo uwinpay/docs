@@ -8,6 +8,7 @@
 | 巴西 | [iugu](代付.html)                                 |
 | 印度 | [dd](代付(dd).html)&nbsp;&nbsp; [ab（通道维护中）](代付(ab).html) |
 | 菲律宾 | [cs](代付(cs).html)&nbsp;&nbsp; [le](代付(le).html) |
+| 墨西哥 | [sp](代付(sp).html)|
 
 ## 请求地址
 https://[[域名]](../help/区域域名.html)/i/pay/create
@@ -28,7 +29,7 @@ Content-Type:application/json
 |订单描述|description|String|是|-|订单描述|
 |电话号码 | mobile | String | 是 | 254743123003 | 收款人联系方式 |
 |邮箱|email|String|是|xxx@gmail.com|收款人邮箱|
-|银行卡号|bank_account|String|是|-|银行卡号|
+|银行卡号|bank_account|String|是|-|收款银行卡号|
 |印度ifsc|bank_code|String|是|56432545555|`必须为11位`|
 |姓名|name|String|是|jack|收款人姓名|
 |金额 | amount | String | 是 |100.00|单位(元)，保留两位小数|
