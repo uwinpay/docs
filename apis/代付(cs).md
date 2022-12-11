@@ -11,7 +11,7 @@
 | 墨西哥 | [sp](代付(sp).html)|
 
 ## 请求地址
-https://[[域名]](../help/区域域名.html)/i/pay/create
+https://[[域名]](../help/区域域名.html)/i/transfer/create
 
 ## 请求方式
 POST
