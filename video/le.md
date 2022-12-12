@@ -1,6 +1,6 @@
 ---
 sort: 2
-show: 2
+show: 1
 ---
 
 # le
