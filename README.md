@@ -1,8 +1,6 @@
 # <img src="assets/images/logo.png" height=20> 
-
 <br><br>
 # 通道概览
-
 ||&nbsp;&nbsp;国家|通道|
 |--|-------|
 |<img src="assets/images/巴西.png">|巴西|<label style="color:green">iugu通道</label>| 
