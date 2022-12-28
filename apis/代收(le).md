@@ -1,13 +1,13 @@
 
 # 代收
 
-当前通道：**le**
+当前通道：**lf**
 
 | 区域 | 通道（可点击切换）                                     |
 | --- |-----------------------------------------------|
 | 巴西 | [iugu](代收.html)                           |
 | 印度 | [dd](代收(dd).html)|
-| 菲律宾 | [cs](代收(cs).html)&nbsp;&nbsp; [le](代收(le).html) |
+| 菲律宾 | [cs](代收(cs).html)&nbsp;&nbsp; [lf](代收(lf).html) |
 | 墨西哥 | [sp](代收(sp).html)|
 
 ## 请求地址
@@ -25,7 +25,7 @@ Content-Type:application/json
 |--|-----|-----|-----|-----|-----|
 |商户号|merchant_code|String|是|100012|商户后台分配的商户号(商户系统->账户信息获取)|
 |商户订单号|merchant_order_no|String|是|221201bx01010|商户系统商户订单号，要求32个字符内|
-|支付通道编码|pay_type|String|是|le|示例中固定值|
+|支付通道编码|pay_type|String|是|lf|示例中固定值|
 |币种|currency|String|是|PHP|菲律宾比索|
 |姓名|name|String|是|Jack|付款人姓名|
 |电话号码|mobile|String|是|5213562778893|付款人联系方式|
@@ -42,7 +42,7 @@ Content-Type:application/json
 {
     "merchant_code": "100012",
     "merchant_order_no": "20221202071940587145",
-    "pay_type": "le",
+    "pay_type": "lf",
     "currency": "PHP",
     "name": "test admin",
     "mobile": "6456312891",
