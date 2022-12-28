@@ -7,7 +7,7 @@
 | --- |-----------------------------------------------------|
 | 巴西 | [iugu](代付.html)                                 |
 | 印度 | [dd](代付(dd).html)|
-| 菲律宾 | [cs](代付(cs).html)&nbsp;&nbsp; [le](代付(le).html) |
+| 菲律宾 | [cs](代付(cs).html)&nbsp;&nbsp; [lf](代付(lf).html) |
 | 墨西哥 | [sp](代付(sp).html)|
 
 ## 请求地址
@@ -25,7 +25,7 @@ Content-Type:application/json
 |-----|-----|-----|-----|-----|-----|
 |商户号|merchant_code|String| 是 | 100012 | 商户后台分配的商户号(商户系统->账户信息获取) |
 |商户订单号|merchant_order_no|String| 是 | 456545645487 | 商户系统商户订单号，要求32个字符内 |
-|支付类型|pay_type|String|是|le|示例中的固定值|
+|支付类型|pay_type|String|是|lf|示例中的固定值|
 |币种|currency|String|是|PHP|菲律宾比索|
 |电话号码|mobile|String|是|254743123003|收款人联系方式|
 |邮箱|email|String|是|xxx@gmail.com|收款人邮箱|
@@ -42,7 +42,7 @@ Content-Type:application/json
 {
   "merchant_code": "100012",
   "merchant_order_no": "20221202071543112398",
-  "pay_type": "le",
+  "pay_type": "lf",
   "currency": "PHP",
   "amount": "199.10",
   "notify_url": "https://www.xxx.com/notify",
