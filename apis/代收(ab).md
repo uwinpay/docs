@@ -6,8 +6,8 @@
 | 区域 | 通道（可点击切换）                                     |
 | --- |-----------------------------------------------|
 | 巴西 | [iugu](代收.html)                           |
-| 印度 | [dd](代收(dd).html)&nbsp;&nbsp; [ab（通道维护中）](代收(ab).html) |
-| 菲律宾 | [cs](代收(cs).html)&nbsp;&nbsp; [le](代收(le).html) |
+| 印度 | [dd](代收(dd).html)|
+| 菲律宾 | [cs](代收(cs).html)&nbsp;&nbsp; [lf](代收(lf).html) |
 | 墨西哥 | [sp](代收(sp).html)|
 
 ## 请求地址
