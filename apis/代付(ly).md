@@ -43,7 +43,7 @@ Content-Type:application/json
 {
   "merchant_code": "100012",
   "merchant_order_no": "20221202071543112398",
-  "pay_type": "lb",
+  "pay_type": "lyb",
   "currency": "PHP",
   "amount": "199.10",
   "notify_url": "https://www.xxx.com/notify",
