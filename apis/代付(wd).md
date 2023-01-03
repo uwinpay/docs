@@ -50,8 +50,8 @@ Content-Type:application/json
   "amount": "100.00",
   "notify_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/wepay\/pay_notify",
   "order_time": 1672727374,
-  "bank_account": "1111222",
-  "remark": "111222",
+  "bank_account": "test",
+  "remark": "test",
   "sign": "69fd86a48ed11774081e579decaffb40"
 }
 ```
