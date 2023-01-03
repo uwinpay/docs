@@ -33,7 +33,7 @@ Content-Type:application/json
 |邮箱|email|String|是|xxxxx@google.com|付款人邮箱|
 |金额|amount|String|是|200|网银2w-1亿，钱包2w-200w，单位(元)，保留两位小数|
 |回调地址|notify_url|String|是|https://www.xxx.com/notify|付款成功后支付系统通过该地址通知支付结果|
-|银行编码|bank_code|String |否|BCA|网银必填，其他不必填|
+|银行编码|bank_code|String |否|BCA|网银必填，其他不必填[银行信息](../help/银行信息.html)|
 |成功转向地址|page_url|String|是|https://www.xxxxx.com/paysuccess|支付成功的返回页面|
 |下单时间戳|order_time|Number|是|1663402686|精确到秒|
 |签名|sign|String|是|9a55c3868b414cdc740068420a2d3q00|[签名算法](../rule/签名算法.html)|
