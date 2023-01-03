@@ -34,6 +34,7 @@ Content-Type:application/json
 |下单时间戳|order_time|Number|是|1663402686|精确到秒|
 |银行名称|bank_name|String|是|TESTBANK|必须大于5个字母，不可有数字和特殊符号|
 |银行账号|bank_acount|String|是|56466655|收款银行账号|
+|IFSC号码|remark|String|是|ABCD0123456|印度银行分行编码|
 |签名|sign|String|是|9a55c3868b414cdc740068420a2d3q00|[签名算法](../rule/签名算法.html)|
 
 ## 请求示例
@@ -41,19 +42,17 @@ Content-Type:application/json
 ```json
 {
   "merchant_code": "100012",
-  "merchant_order_no": "20221230175957541924",
+  "merchant_order_no": "20230103142934123614",
   "currency": "INR",
   "name": "test",
   "mobile": "09456312891",
-  "email": "gmail@gmail.com",
   "amount": "100.00",
   "notify_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/wepay\/pay_notify",
-  "page_url": "test",
-  "order_time": 1672394397,
+  "order_time": 1672727374,
   "bank_name": "TESTBANK",
   "bank_account": "1111222",
   "remark": "111222",
-  "sign": "bd5cf3af0d71707dd54f741a4534b81e"
+  "sign": "69fd86a48ed11774081e579decaffb40"
 }
 ```
 
