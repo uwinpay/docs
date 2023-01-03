@@ -26,6 +26,7 @@ Content-Type:application/json
 |-----|-----|-----|-----|-----|-----|
 |商户号|merchant_code|String|是|100012|商户后台分配的商户号(商户系统->账户信息获取) |
 |商户订单号|merchant_order_no|String|是|456545645487|商户系统商户订单号，要求32个字符内 |
+|支付通道编码|pay_type|String|是|wab|wab-网银，waw-钱包|
 |币种|currency|String|是|INR|卢比|
 |电话号码|mobile|String|是|254743123003|收款人联系方式|
 |姓名|name|String|是|Jack|收款人姓名|
@@ -33,7 +34,7 @@ Content-Type:application/json
 |回调地址|notify_url|String|是|https://www.xxx.com/notify|付款成功后支付系统通过该地址通知支付结果|
 |下单时间戳|order_time|Number|是|1663402686|精确到秒|
 |银行编号|bank_code|String|是|BCA|[银行信息](../help/银行信息.html)|
-|银行名称|bank_name|String|是|	Bank BCA|必须大于5个字母，不可有数字和特殊符号|
+|银行户名|bank_name|String|是|	Bank BCA|	银行户名|
 |银行账号|bank_acount|String|是|56466655|收款银行账号|
 |签名|sign|String|是|9a55c3868b414cdc740068420a2d3q00|[签名算法](../rule/签名算法.html)|
 
@@ -43,12 +44,12 @@ Content-Type:application/json
 {
   "merchant_code": "100012",
   "merchant_order_no": "20230103113942540675",
+  "pay_type": "wab",
   "currency": "IDR",
   "name": "test",
   "mobile": "09456312891",
   "amount": "100.00",
   "notify_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/wepay\/pay_notify",
-  "page_url": "test",
   "order_time": 1672717182,
   "bank_code": "11111",
   "bank_name": "test",
