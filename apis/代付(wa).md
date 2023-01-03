@@ -29,13 +29,12 @@ Content-Type:application/json
 |支付通道编码|pay_type|String|是|wab|wab-网银，waw-钱包|
 |币种|currency|String|是|INR|卢比|
 |电话号码|mobile|String|是|254743123003|收款人联系方式|
-|姓名|name|String|是|Jack|收款人姓名|
+|姓名|name|String|是|Jack|银行账户名|
 |金额|amount|String|是|100.00|单位(元)，保留两位小数|
 |回调地址|notify_url|String|是|https://www.xxx.com/notify|付款成功后支付系统通过该地址通知支付结果|
 |下单时间戳|order_time|Number|是|1663402686|精确到秒|
 |银行编号|bank_code|String|是|BCA|[银行信息](../help/银行信息.html)|
-|银行户名|bank_name|String|是|	Bank BCA|	银行户名|
-|银行账号|bank_acount|String|是|56466655|收款银行账号|
+|银行账号|bank_acount|String|是|56466655|收款银行账号，代付到电子钱包填写手机号码|
 |签名|sign|String|是|9a55c3868b414cdc740068420a2d3q00|[签名算法](../rule/签名算法.html)|
 
 ## 请求示例
@@ -52,7 +51,6 @@ Content-Type:application/json
   "notify_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/wepay\/pay_notify",
   "order_time": 1672717182,
   "bank_code": "11111",
-  "bank_name": "test",
   "bank_account": "1111222",
   "sign": "18b579bc98d9ebcb67c4c75a84f1bcc6"
 }
