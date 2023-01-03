@@ -29,7 +29,7 @@ Content-Type:application/json
 |支付通道编码|pay_type|String|是|wd|示例中的固定值|
 |币种|currency|String|是|INR|卢比|
 |电话号码|mobile|String|是|254743123003|收款人联系方式|
-|姓名|name|String|是|Jack|收款人姓名|
+|姓名|name|String|是|Jack|银行账户名|
 |金额|amount|String|是|100.00|单位(元)，保留两位小数|
 |回调地址|notify_url|String|是|https://www.xxx.com/notify|付款成功后支付系统通过该地址通知支付结果|
 |下单时间戳|order_time|Number|是|1663402686|精确到秒|
