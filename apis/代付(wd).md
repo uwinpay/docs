@@ -33,7 +33,6 @@ Content-Type:application/json
 |金额|amount|String|是|100.00|单位(元)，保留两位小数|
 |回调地址|notify_url|String|是|https://www.xxx.com/notify|付款成功后支付系统通过该地址通知支付结果|
 |下单时间戳|order_time|Number|是|1663402686|精确到秒|
-|银行名称|bank_name|String|是|TESTBANK|必须大于5个字母，不可有数字和特殊符号|
 |银行账号|bank_acount|String|是|56466655|收款银行账号|
 |IFSC号码|remark|String|是|ABCD0123456|印度银行分行编码|
 |签名|sign|String|是|9a55c3868b414cdc740068420a2d3q00|[签名算法](../rule/签名算法.html)|
@@ -51,7 +50,6 @@ Content-Type:application/json
   "amount": "100.00",
   "notify_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/wepay\/pay_notify",
   "order_time": 1672727374,
-  "bank_name": "TESTBANK",
   "bank_account": "1111222",
   "remark": "111222",
   "sign": "69fd86a48ed11774081e579decaffb40"
