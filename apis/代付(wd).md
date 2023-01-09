@@ -1,11 +1,11 @@
 # 代付
 
-当前通道：**wd**
+当前通道：**202**
 
 | 区域 | 通道（可点击切换）                                           |
 | --- |-----------------------------------------------------|
 | 巴西 | [iugu](代付.html)                                 |
-| 印度 | [201](代付(dd).html)&nbsp;&nbsp; [wd](代付(wd).html)|
+| 印度 | [201](代付(dd).html)&nbsp;&nbsp; [202](代付(wd).html)|
 | 菲律宾 | [cs](代付(cs).html)&nbsp;&nbsp; [lf](代付(lf).html) |
 | 墨西哥 | [sp](代付(sp).html)|
 | 越南 | [ly](代付(ly).html)|
@@ -26,7 +26,7 @@ Content-Type:application/json
 |-----|-----|-----|-----|-----|-----|
 |商户号|merchant_code|String|是|100012|商户后台分配的商户号(商户系统->账户信息获取) |
 |商户订单号|merchant_order_no|String|是|456545645487|商户系统商户订单号，要求32个字符内 |
-|支付通道编码|pay_type|String|是|wd|示例中的固定值|
+|支付通道编码|pay_type|String|是|202|示例中的固定值|
 |币种|currency|String|是|INR|卢比|
 |电话号码|mobile|String|是|254743123003|收款人联系方式|
 |姓名|name|String|是|Jack|银行账户名|
@@ -43,7 +43,7 @@ Content-Type:application/json
 {
   "merchant_code": "100012",
   "merchant_order_no": "20230103142934123614",
-  "pay_type": "wd",
+  "pay_type": "202",
   "currency": "INR",
   "name": "test",
   "mobile": "09456312891",
