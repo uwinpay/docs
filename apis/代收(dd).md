@@ -27,7 +27,7 @@ Content-Type:application/json
 |--|-----|-----|-----|-----|-----|
 |商户号|merchant_code|String|是|100012|商户后台分配的商户号(商户系统->账户信息获取)|
 |商户订单号 |merchant_order_no|String|是|221201bx01010|商户系统商户订单号，要求32个字符内|
-|支付通道编码|pay_type|String|是|dd|示例中的固定值|
+|支付通道编码|pay_type|String|是|201|示例中的固定值|
 |代收方式|method|String|是|UPI|示例中的固定值|
 |币种|currency|String|是|INR|卢比|
 |订单描述|description|String|是|-|订单描述|
@@ -46,7 +46,7 @@ Content-Type:application/json
 {
     "merchant_code": "100012",
     "merchant_order_no": "20221202050255582633",
-    "pay_type": "dd",
+    "pay_type": "201",
     "method": "UPI",
     "currency": "INR",
     "description": "description",
