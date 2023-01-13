@@ -5,7 +5,7 @@
 
 | 区域 | 通道（可点击切换）|
 | --- |-----------------------------------------------|
-| 巴西 | [iugu](代收.html)&nbsp;&nbsp;[skb](代收.html)|
+| 巴西 | [iugu](代收.html)&nbsp;&nbsp;[skb](代收(skb).html)|
 | 印度 | [201](代收(dd).html)&nbsp;&nbsp; [202](代收(wd).html)|
 | 菲律宾 | [cs](代收(cs).html)&nbsp;&nbsp; [lf](代收(lf).html) |
 | 墨西哥 | [sp](代收(sp).html)|
