@@ -3,9 +3,9 @@
 
 ||&nbsp;&nbsp;国家|通道|
 |--|-------|------|
-|<img src="assets/images/巴西.png">|巴西|<label style="color:green">iugu通道</label>&nbsp;&nbsp;&nbsp;&nbsp;<label style="color:green">skb通道</label>| 
-|<img src="assets/images/墨西哥.png">&nbsp;|墨西哥|<label style="color:green">sp通道</label>|
-|<img src="assets/images/印度.png">&nbsp;|印度|<label style="color:green">201通道</label>&nbsp;&nbsp;&nbsp;&nbsp;<label style="color:green">202通道</label>&nbsp;&nbsp;&nbsp;&nbsp;<label style="color:green">[203通道](../apis/代收(203).md)</label>|
-|<img src="assets/images/菲律宾.png">&nbsp;|菲律宾|<label style="color:green">cs通道</label>&nbsp;&nbsp;&nbsp;&nbsp;<label style="color:green">le通道</label>|
-|<img src="assets/images/越南.png">|越南|<label style="color:green">ly通道</label>| 
-|<img src="assets/images/印度尼西亚.png">|印度尼西亚|<label style="color:green">wa通道</label>| 
+|<img src="assets/images/巴西.png">|巴西|<label style="color:green">[iugu通道](../apis/代收(iugu).html)</label>&nbsp;&nbsp;&nbsp;&nbsp;<label style="color:green">[skb通道](../apis/代收(skb).html)</label>| 
+|<img src="assets/images/墨西哥.png">&nbsp;|墨西哥|<label style="color:green">[sp通道](../apis/代收(sp).html)</label>|
+|<img src="assets/images/印度.png">&nbsp;|印度|<label style="color:green">[201通道](../apis/代收(201).html)</label>&nbsp;&nbsp;&nbsp;&nbsp;<label style="color:green">[202通道](../apis/代收(202).html)</label>&nbsp;&nbsp;&nbsp;&nbsp;<label style="color:green">[203通道](../apis/代收(203).html)</label>|
+|<img src="assets/images/菲律宾.png">&nbsp;|菲律宾|<label style="color:green">[cs通道](../apis/代收(cs).html)</label>&nbsp;&nbsp;&nbsp;&nbsp;<label style="color:green">le通道</label>|
+|<img src="assets/images/越南.png">|越南|<label style="color:green">[ly通道](../apis/代收(ly).html)</label>| 
+|<img src="assets/images/印度尼西亚.png">|印度尼西亚|<label style="color:green">[wa通道](../apis/代收(wa).html)</label>| 
