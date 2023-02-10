@@ -1,0 +1,87 @@
+
+# 代付
+
+当前通道：**rb**
+
+| 区域 | 通道（可点击切换）|
+| --- |-----------------------------------------------------|
+| 巴西 | [iugu](代付.html)&nbsp;&nbsp; [skb](代付(skb).html)|
+| 印度 | [201](代付(dd).html)&nbsp;&nbsp; [202](代付(wd).html)&nbsp;&nbsp; [203](代付(203).html)&nbsp;&nbsp; [204](代付(204).html)|
+| 菲律宾 | [cs](代付(cs).html)&nbsp;&nbsp; [lf](代付(lf).html)&nbsp;&nbsp; [rb](代付(rb).html)|
+| 墨西哥 | [sp](代付(sp).html)|
+| 越南 | [ly](代付(ly).html)|
+| 印度尼西亚 | [wa](代付(wa).html)|
+
+## 请求地址
+https://[[域名]](../help/区域域名.html)/i/transfer/create
+
+## 请求方式
+POST
+
+## 请求头
+Content-Type:application/json
+
+## 请求参数
+
+| 字段名 | 参数名 | 类型 | 必填 | 示例 | 描述 |
+|-----|-----|-----|-----|-----|-----|
+|商户号 | merchant_code | String | 是 | 100012 | 商户后台分配的商户号(商户系统->账户信息获取) |
+|商户订单号 | merchant_order_no | String | 是 | 456545645487 | 商户系统商户订单号，要求32个字符内 |
+|支付通道编码|pay_type|String|是|rb|示例中的固定值|
+|币种|currency|String|是|PHP|菲律宾比索|
+|收款账号|bank_account|String|是|56454245444|收款银行账号|
+|姓名|name|String|是|jack|收款人姓名|
+|金额|amount|String|是|100.00|单位(元)，保留两位小数|
+|回调地址|notify_url|String|是|https://www.xxx.com/notify | 付款成功后支付系统通过该地址通知支付结果 |
+|签名|sign|String|是|9a55c3868b414cdc740068420a2d3q00 |[签名算法](../rule/签名算法.html)|
+
+## 请求示例
+
+```json
+{
+    "merchant_code": "100012",
+    "merchant_order_no": "20230210143807917230",
+    "pay_type": "rb",
+    "currency": "PHP",
+    "bank_account": "123123123",
+    "name": "jack",
+    "amount": "100.09",
+    "notify_url": "https:\/\/www.test.com\/pay_notify",
+    "sign": "3cb4a880c82a750325ed68e2482d64a6"
+}
+```
+
+## 返回结果
+
+|字段名|参数名|类型|必填|示例|描述|
+|-----|-------------------------|-----|-----|-----|-----|
+|响应状态|code|String|是|success|success/fail/error|
+|请求信息|msg|String|是|ok|返回的请求信息|
+|数据体|data|Object|是|-|以下为数据体属性|
+|平台订单号|data>>order_no|String|是|20210226165044236|系统生成的平台订单号|
+|商户订单号|data>>merchant_order_no|String|是|10226165044236|商户系统商户订单号，要求32个字符内|
+|商户号|data>>merchant_code|String|是|GKggRpDN6|商户后台分配的商户号(商户系统->账户信息获取)|
+|金额|data>>amount|String|是|100.00|单位(元)，保留两位小数|
+|实际金额|data>>reality_amount|String|是|100.00|单位(元)，保留两位小数|
+|订单状态|data>>order_status|Number|是|2|[参数说明](../help/参数说明.html#订单状态)|
+|下单时间戳|data>>order_time|Number|是|1663402686|精确到秒|
+|签名|data>>sign|String|是|9a55c3868b414cdc740068420a2d3q00|[签名算法](../rule/签名算法.html)|
+
+## 响应示例
+
+```json
+{
+    "code": "success",
+    "data": {
+        "merchant_code": "100012",
+        "merchant_order_no": "20230210143807917230",
+        "amount": "100.09",
+        "reality_amount": "100.09",
+        "order_status": 0,
+        "order_no": "20230210143812151925",
+        "order_time": 1676011092,
+        "sign": "a7d3b1a035fe4ac21de90aa29fc64170"
+    },
+    "msg": "ok"
+}
+```
