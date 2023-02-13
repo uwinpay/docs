@@ -27,7 +27,7 @@ Content-Type:application/json
 |-----|-----|-----|-----|-----|-----|
 |商户号|merchant_code|String| 是 | 100012 | 商户后台分配的商户号(商户系统->账户信息获取) |
 |商户订单号|merchant_order_no|String| 是 | 456545645487 | 商户系统商户订单号，要求32个字符内 |
-|支付类型|pay_type|String|是|lf|示例中的固定值|
+|支付类型|pay_type|String|是|lft1|示例中的固定值|
 |币种|currency|String|是|PHP|菲律宾比索|
 |电话号码|mobile|String|是|254743123003|收款人联系方式|
 |邮箱|email|String|是|xxx@gmail.com|收款人邮箱|
@@ -42,18 +42,18 @@ Content-Type:application/json
 
 ```json
 {
-  "merchant_code": "100012",
-  "merchant_order_no": "20221202071543112398",
-  "pay_type": "lf",
-  "currency": "PHP",
-  "amount": "199.10",
-  "notify_url": "https://www.xxx.com/notify",
-  "name": "test",
-  "mobile": "6456312891",
-  "email": "admin@qq.com",
-  "bank_code": "GrabPay",
-  "bank_account": "6456312891",
-  "sign": "8f8f38efebc930d14995f3ea96ae8b48"
+	"merchant_code": "100012",
+	"merchant_order_no": "20230213185538128768",
+	"pay_type": "lft1",
+	"currency": "PHP",
+	"amount": "100.00",
+	"notify_url": "https:\/\/www.uwinpay.com\/api\/public\/index.php\/test\/transfer_notify",
+	"name": "test",
+	"mobile": "6456312891",
+	"email": "admin@qq.com",
+	"bank_code": "GrabPay",
+	"bank_account": "6456312891",
+	"sign": "1fc3f1fb1e5de3e9c278b9a3406b204c"
 }
 ```
 
