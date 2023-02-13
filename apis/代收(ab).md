@@ -7,7 +7,7 @@
 | --- |-----------------------------------------------|
 | 巴西 | [iugu](代收.html)&nbsp;&nbsp; [skb](代收(skb).html)|
 | 印度 | [201](代收(dd).html)&nbsp;&nbsp; [202](代收(wd).html)&nbsp;&nbsp; [203](代收(203).html)&nbsp;&nbsp; [204](代收(204).html)|
-| 菲律宾 | [cs](代收(cs).html)&nbsp;&nbsp; [lf](代收(lf).html) &nbsp;&nbsp; [rb](代收(rb).html)|
+| 菲律宾 | [cs](代收(cs).html)&nbsp;&nbsp; [lf](代收(lf).html) &nbsp;&nbsp; [rb](代收(rb).html)&nbsp;&nbsp; [lft1](代收(lft1).html)|
 | 墨西哥 | [sp](代收(sp).html)|
 | 越南 | [ly](代收(ly).html)|
 | 印度尼西亚 | [wa](代收(wa).html)
