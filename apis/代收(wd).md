@@ -5,7 +5,7 @@
 | 区域 | 通道（可点击切换）|
 | --- |-----------------------------------------------|
 | 巴西 | [iugu](代收.html)&nbsp;&nbsp; [skb](代收(skb).html)|
-| 印度 | [201](代收(201).html)&nbsp;&nbsp; [202](代收(202).html)&nbsp;&nbsp; [203](代收(203).html)&nbsp;&nbsp; [204](代收(204).html)&nbsp;&nbsp; [205](代收(205).html)|
+| 印度 | [201](代收(201).html)&nbsp;&nbsp; [202](代收(202).html)&nbsp;&nbsp; [203](代收(203).html)&nbsp;&nbsp; [204](代收(204).html)&nbsp;&nbsp; [205](代收(205).html)&nbsp;&nbsp; [206](代收(206).html)|
 | 菲律宾 | [cs](代收(cs).html)&nbsp;&nbsp; [lf](代收(lf).html) &nbsp;&nbsp; [rb](代收(rb).html)&nbsp;&nbsp; [lft1](代收(lft1).html)|
 | 墨西哥 | [sp](代收(sp).html)|
 | 越南 | [ly](代收(ly).html)|
