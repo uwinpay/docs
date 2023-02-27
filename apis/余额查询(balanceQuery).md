@@ -43,7 +43,6 @@ Content-Type:application/json
 |今日代收成功单数| data>>payment_succ_total|String|是|
 |今日代收总单数| data>>payment_total|String|是|
 |今日代收成功率| data>>payment_succ_rate|String|是|
-
 |今日代付成功金额| data>>transfer_amount|String|是|
 |今日代付成功单数|data>>transfer_succ_total|String|是|
 |今日代付总单数|data>>transfer_total|String|是|
