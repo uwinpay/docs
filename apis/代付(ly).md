@@ -9,7 +9,7 @@
 | 印度 | [IN201](代付(201).html)&nbsp;&nbsp; [IN202](代付(202).html)&nbsp;&nbsp; [IN203](代付(203).html)&nbsp;&nbsp; [IN204](代付(204).html)&nbsp;&nbsp; [IN205](代付(205).html)&nbsp;&nbsp; [IN206](代付(206).html)&nbsp;&nbsp; [IN207](代付(207).html)|
 | 菲律宾 | [PH001](代付(cs).html)&nbsp;&nbsp; [PH002](代付(lf).html) &nbsp;&nbsp; [PH003](代付(rb).html) &nbsp;&nbsp; [PH004](代付(lft1).html)|
 | 墨西哥 | [MX001](代付(sp).html)|
-| 越南 | [VN002](代付(ly).html)|
+| 越南 | [VN001](代付(ly).html)|
 | 印度尼西亚 | [ID001](代付(wa).html)|
 
 ## 请求地址
