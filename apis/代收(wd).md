@@ -26,7 +26,7 @@ Content-Type:application/json
 |--|-----|-----|-----|-----|-----|
 |商户号|merchant_code|String|是|100012|商户后台分配的商户号(商户系统->账户信息获取)|
 |商户订单号|merchant_order_no|String|是|221201bx01010|商户系统商户订单号，要求32个字符内|
-|支付通道编码|pay_type|String|是|202|示例中的固定值|
+|支付通道编码|pay_type|String|是|207|示例中的固定值|
 |币种|currency|String|是|INR|示例中的固定值|
 |姓名|name|String|是|Jack|付款人姓名|
 |电话号码|mobile|String|是|5213562778893|付款人联系方式|
@@ -43,7 +43,7 @@ Content-Type:application/json
 {
     "merchant_code": "100012",
     "merchant_order_no": "20230103093027907097",
-    "pay_type": "202",
+    "pay_type": "207",
     "currency": "INR",
     "name": "test",
     "mobile": "09456312891",
