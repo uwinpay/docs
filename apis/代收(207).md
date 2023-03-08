@@ -4,7 +4,7 @@
 
 | 区域 | 通道（可点击切换）|
 | --- |-----------------------------------------------|
-| 巴西 | [BR001](代收.html)&nbsp;&nbsp; [BR001](代收(skb).html)|
+| 巴西 | [BR001](代收.html)|
 | 印度 | [IN201](代收(201).html)&nbsp;&nbsp; [IN202](代收(202).html)&nbsp;&nbsp; [IN203](代收(203).html)&nbsp;&nbsp; [IN204](代收(204).html)&nbsp;&nbsp; [IN205](代收(205).html)&nbsp;&nbsp; [IN206](代收(206).html)&nbsp;&nbsp; [IN207](代收(207).html)|
 | 菲律宾 | [PH001](代收(cs).html)&nbsp;&nbsp; [PH002](代收(lf).html) &nbsp;&nbsp; [PH003](代收(rb).html) &nbsp;&nbsp; [PH004](代收(lft1).html)&nbsp;&nbsp; [PH005](代收(PH005).html)|
 | 墨西哥 | [MX001](代收(sp).html)|
